@@ -56,5 +56,5 @@ app.get("/results", function(req, res) {
 
 //Server
 app.listen(port, function() {
-  console.log("Lyric Search started on "+port);
+  console.log("Lyric Search started on "+ port);
 });
