@@ -1,7 +1,7 @@
 var express = require("express");
 var request = require("request");
 var app = express();
-
+var port = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 console.log(__dirname + "/public");
@@ -55,6 +55,6 @@ app.get("/results", function(req, res) {
 });
 
 //Server
-app.listen("8081", function() {
-  console.log("Lyric Search started");
+app.listen(port, function() {
+  console.log("Lyric Search started on "+port);
 });
